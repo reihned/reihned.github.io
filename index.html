@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>What is this I don't even...</title>
+  <head>
+    <title>What is this I don't even...</title>
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery2.min.js"></script>
+    <script src="js/editor.js"></script>
 
 
-</head>
-<body>
-  <section id="intro" class="row">
-    <div class="row">
-      <h1 class="twelve columns">Hello There</h1>
-      <h3 class="twelve columns">You may call me Ray.</h3>
+  </head>
+  <body>
+    <div class="container">
+      <section id="intro" class="row">
+        <div class="row">
+          <h1 class="twelve columns">Hello There</h1>
+          <h3 class="twelve columns">You may call me Ray.</h3>
+        </div>
+        <div class="row">
+          <details>
+            <summary class="row">I live to:</summary>
+            <ul>
+              <li>make friends facepalm</li>
+              <li>contemplate puzzles</li>
+              <li>spread my laugh across the observable universe</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+      <section id="playground" class="row">
+        <article id="editor">
+          <div class="description row">
+            <h4>Editor</h4>
+            <p>
+              Here's something you can play with, a live updating editor. This is all client side and no data should persist.
+            </p>
+          </div>
+          <div class="demo row">
+            <form class="six columns">
+              <textarea id="editor_input">
+              </textarea>
+            </form>
+            <div id="editor_yield" class="six columns">
+
+            </div>
+          </div>
+        </div>
+
+        </article>
+      </section>
+      <section id="projects" class="row">
+
+      </section>
     </div>
-    <div class="row">
-      <details>
-        <summary class="row">I live to:</summary>
-        <ul>
-          <li>make everyone I care about facepalm</li>
-          <li>bash at puzzles until they are solved</li>
-          <li>spread my laugh across the observable universe</li>
-        </ul>
-      </details>
-    </div>
-  </section>
-  <section id="projects" class="row">
+  </body>
 
-  </secion>
-</body>
 </html>
