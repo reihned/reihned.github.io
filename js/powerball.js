@@ -84,6 +84,7 @@ function pb_generate(){
 
 function render_tickets(tickets){
   //expecting an array of str
+  $("#powerball_yield").empty();
   tickets.forEach(function(ticket){
     $("#powerball_yield").append("<li>"+ticket+","+pb_generate()+"</li>");
   });
