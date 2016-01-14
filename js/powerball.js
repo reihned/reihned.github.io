@@ -16,6 +16,9 @@ var processed_row_col = []
 var wb_pool = [];
 var pb_pool = [];
 
+var wb_max = 69
+var pb_max = 26;
+
 $.ajax({
   url: proxy+source,
   type: 'GET',
@@ -34,16 +37,27 @@ $.ajax({
     return row.split(/\s+/);
   });
   processed_row_col.shift();
+  //generate white ball weighted pool
   wb_pool = processed_row_col.map(function(row) {
     return row.slice(1,6);
   }).reduce(function(a, b) {
     return a.concat(b);
   });
+  wb_poll = wb_pool.concat(wb_pool); // double weight
+  //generate powerball weighted pool
   pb_pool = processed_row_col.map(function(row) {
     return row.slice(6,7);
   }).reduce(function(a, b) {
     return a.concat(b);
   });
+  pbpool = pb_pool.concat(pb_pool); // double weight
+  //insert a baseline for all numbers for wildcard purposes.
+  for (var i = 1; i <= wb_max; i++) {
+    wb_pool.push(i);
+  }
+  for (var i = 1; i <= pb_; i++) {
+    pb_pool.push(i);
+  }
 });
 
 function is_same(array1, array2){
@@ -86,7 +100,7 @@ function render_tickets(tickets){
   //expecting an array of str
   $("#powerball_yield").empty();
   tickets.forEach(function(ticket){
-    $("#powerball_yield").append("<li>"+ticket+","+pb_generate()+"</li>");
+    $("#powerball_yield").append("<li>"+ticket+",<strong>"+pb_generate()+"</strong></li>");
   });
 }
 
